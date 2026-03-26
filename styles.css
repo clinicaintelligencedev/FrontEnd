@@ -1,0 +1,187 @@
+/* ============================================================
+   CLÍNICA INTELLIGENCE — Estilos Landing Page
+   ============================================================ */
+
+/* VARIABLES Y RESET */
+:root {
+  --navy:    #1A3A5C;
+  --blue:    #2E9BDA;
+  --blue-lt: #EBF5FB;
+  --white:   #FFFFFF;
+  --gray-lt: #F4F6F8;
+  --gray:    #8A9BB0;
+  --text:    #1C2B36;
+  --text-mid:#4A5568;
+  --gold:    #E8A020;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(26,58,92,0.09);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.97); backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(26,58,92,0.08);
+  padding: 0 80px; height: 80px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+nav.scrolled { box-shadow: 0 2px 16px rgba(26,58,92,0.10); }
+.nav-logo { text-decoration: none; display: flex; align-items: center; gap: 10px; line-height: 1.1; }
+.nav-logo-img { height: 48px; width: 48px; }
+.nav-logo-text { display: flex; flex-direction: column; }
+.nav-logo .l1 { font-size: 10px; font-weight: 400; letter-spacing: 0.22em; color: var(--gray); text-transform: uppercase; }
+.nav-logo .l2 { font-size: 15px; font-weight: 700; letter-spacing: 0.08em; color: var(--navy); text-transform: uppercase; }
+.nav-links { display: flex; gap: 40px; list-style: none; }
+.nav-links a { font-size: 15px; font-weight: 500; color: var(--text-mid); text-decoration: none; }
+.nav-links a:hover { color: var(--navy); }
+.nav-ctas { display: flex; gap: 12px; }
+.btn-o { font-size: 14px; font-weight: 600; background: var(--navy); color: #fff; border-radius: 100px; padding: 11px 26px; text-decoration: none; border: none; transition: opacity 0.15s; }
+.btn-o:hover { opacity: 0.85; }
+
+/* ============================================================
+   LAYOUT GENERAL
+   ============================================================ */
+section { width: 100%; }
+.inner { padding: 100px 80px; max-width: 1400px; margin: 0 auto; }
+.eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: var(--gold); margin-bottom: 24px; display: block; }
+.sec-title { font-size: clamp(32px, 3vw, 48px); font-weight: 400; color: var(--navy); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 24px; }
+.sec-title-center { text-align: center; margin-bottom: 48px; }
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s, transform 0.5s; will-change: opacity, transform; }
+.fade-in.visible { opacity: 1; transform: none; }
+
+/* ============================================================
+   SECCIÓN 1 — HERO
+   ============================================================ */
+#hero { background: var(--white); position: relative; overflow: hidden; }
+#flickerGrid { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.hero-inner { position: relative; z-index: 1; padding: 60px 80px 100px 120px; max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 50fr 50fr; gap: 60px; align-items: center; min-height: calc(100vh - 80px); }
+.hero-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.02em; color: var(--gold); margin-bottom: 12px; display: block; }
+.hero-h1 { font-size: clamp(32px, 2.8vw, 38px); font-weight: 400; color: var(--navy); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 24px; }
+.hero-body { font-size: 16px; color: var(--text-mid); line-height: 1.72; margin-bottom: 24px; }
+.hero-body strong { color: var(--text); font-weight: 600; }
+.hero-ctas { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-top: auto; }
+.btn-pill-outline { font-size: 15px; font-weight: 600; color: var(--navy); background: transparent; border: 2px solid var(--navy); border-radius: 100px; padding: 12px 72px; text-decoration: none; transition: background 0.15s, color 0.15s; display: inline-flex; align-items: center; gap: 6px; }
+.btn-pill-outline:hover { background: var(--navy); color: #fff; }
+.hero-img { width: 100%; display: flex; align-items: center; justify-content: center; }
+.hero-img img { width: 70%; max-height: none; object-fit: contain; border-radius: 16px; }
+/* Tarjetas hero — estadísticas */
+.hero-cards { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 0 32px 60px; max-width: 1100px; margin: 0 auto; }
+.hero-card { background: var(--white); border: 0.5px solid #E8E7E2; border-radius: 12px; padding: 1.75rem 1.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 220px; }
+.hero-card-acento { width: 24px; height: 3px; border-radius: 2px; background: #0F6E56; margin-bottom: 1rem; }
+.hero-card-num { font-size: 48px; font-weight: 700; color: var(--navy); line-height: 1; margin-bottom: 1rem; font-family: Georgia, serif; }
+.hero-card-num span { font-size: 32px; }
+.hero-card-text { font-size: 13px; color: #5F5E5A; line-height: 1.7; flex: 1; margin-bottom: 1.25rem; }
+.hero-card-src { display: inline-block; font-size: 10px; font-weight: 600; color: #888780; background: #F1EFE8; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.02em; }
+
+/* ============================================================
+   SECCIÓN 2 — MODELOS
+   ============================================================ */
+#modelo { background: var(--blue-lt); scroll-margin-top: 80px; }
+.tag-proximamente { display: inline-block; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 20px; border-radius: 100px; background: var(--gray-lt); color: var(--gray); margin-top: 16px; }
+.modelo-bloque { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 72px; padding-bottom: 72px; border-bottom: 1px solid rgba(26,58,92,0.1); }
+.modelo-bloque:last-of-type { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.modelo-bloque.reverse .modelo-bloque-text { order: 2; }
+.modelo-bloque.reverse .modelo-img { order: 1; }
+.modelo-bloque-text h3 { font-size: 32px; font-weight: 400; color: var(--navy); margin-bottom: 16px; letter-spacing: -0.01em; }
+.modelo-bloque-text p { font-size: 16px; color: var(--text-mid); line-height: 1.75; margin-bottom: 12px; }
+.modelo-bloque-text p strong { color: var(--text); }
+.modelo-img { border-radius: var(--radius); overflow: hidden; background: var(--white); padding: 24px; box-shadow: var(--shadow); }
+.modelo-img img { width: 100%; height: auto; display: block; }
+.modelo-cita { background: #223F5A; padding: 64px 32px; display: flex; justify-content: center; }
+.modelo-quote { max-width: 640px; width: 100%; text-align: center; }
+.modelo-quote-comilla { font-size: 72px; font-family: Georgia, serif; color: rgba(255,255,255,0.12); line-height: 0.6; margin-bottom: 24px; display: block; }
+.modelo-quote-text { font-size: 20px; font-family: Georgia, serif; color: #fff; line-height: 1.6; font-style: italic; font-weight: 400; margin-bottom: 28px; }
+.modelo-quote-linea { width: 40px; height: 1px; background: rgba(255,255,255,0.2); margin: 0 auto 24px; }
+.modelo-quote-sub { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* ============================================================
+   SECCIÓN 3 — CLÍNICAS
+   ============================================================ */
+#clinicas { background: #F7F5F0; scroll-margin-top: 80px; }
+#clinicas .inner { padding-top: 60px; }
+.org-pretag { display: block; text-align: center; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: #0F6E56; text-transform: uppercase; margin-bottom: 12px; }
+.org-subtitulo { text-align: center; font-size: 14px; color: var(--gray); margin-bottom: 40px; line-height: 1.6; max-width: 480px; margin-left: auto; margin-right: auto; }
+.org-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.org-card { background: var(--white); border-radius: var(--radius); padding: 28px 24px; border: 0.5px solid #E8E7E2; }
+.org-card h3 { font-size: 20px; font-weight: 400; color: var(--navy); line-height: 1.4; margin-bottom: 16px; }
+.org-card p { font-size: 15px; color: var(--text-mid); line-height: 1.65; }
+.org-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.05em; padding: 3px 8px; border-radius: 4px; margin-bottom: 10px; text-transform: uppercase; }
+.org-tag-problema { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); }
+.org-tag-solucion { background: #E1F5EE; color: #0F6E56; }
+.org-tag-origen { background: #E6F1FB; color: #185FA5; }
+.org-card-problema { background: #2C4F6E; }
+.org-card-problema h3 { color: #fff; }
+.org-card-problema p { color: rgba(255,255,255,0.85); }
+
+/* ============================================================
+   SECCIÓN 4 — CÓMO FUNCIONA
+   ============================================================ */
+#funciona { background: var(--blue-lt); overflow: hidden; scroll-margin-top: 80px; }
+#funciona .inner { padding-top: 60px; }
+.funciona-head { margin-bottom: 56px; }
+.funciona-pretag { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: #0F6E56; text-transform: uppercase; margin-bottom: 10px; }
+.funciona-head .sec-title { margin-bottom: 0; }
+/* Fórmula — fila horizontal */
+.formula { display: flex; align-items: center; gap: 0; }
+.formula-card { background: var(--white); border-radius: 10px; padding: 24px 20px; border: 0.5px solid #E8E7E2; flex: 1; }
+.formula-card-destacado { border-color: var(--navy); }
+.formula-op { display: flex; align-items: center; justify-content: center; padding: 0 12px; font-size: 18px; color: #B4B2A9; font-weight: 300; flex-shrink: 0; }
+.formula-num { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: #B4B2A9; margin-bottom: 6px; display: block; }
+.formula-num-dark { color: var(--navy); }
+.formula-titulo { font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 14px; letter-spacing: -0.01em; }
+.formula-items { display: flex; flex-direction: column; }
+.formula-item { font-size: 14px; color: #5F5E5A; padding: 8px 0; border-bottom: 0.5px solid #F0EFE8; line-height: 1.5; }
+.formula-item:last-child { border-bottom: none; }
+.formula-center { background: transparent; border-radius: 16px; padding: 20px; text-align: center; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.formula-center-img { display: block; width: 140px; height: 140px; object-fit: contain; margin: 0 auto 8px; }
+.formula-center-l2 { display: block; font-size: 16px; font-weight: 700; letter-spacing: 0.08em; color: var(--navy); text-transform: uppercase; }
+.formula-center-l3 { display: block; font-size: 14px; font-weight: 500; letter-spacing: 0.06em; color: var(--gray); text-transform: uppercase; }
+.formula-center-time { display: block; font-size: 20px; font-weight: 700; color: #0F6E56; margin-top: 12px; }
+/* ============================================================
+   SECCIÓN 5 — PRIVACIDAD
+   ============================================================ */
+#privacidad { background: var(--white); scroll-margin-top: 80px; }
+.priv-pretag { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: #0F6E56; text-transform: uppercase; margin-bottom: 10px; }
+.priv-subtitle { font-size: 14px; color: var(--gray); margin-bottom: 32px; line-height: 1.6; max-width: 420px; }
+.priv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.priv-badge { width: 8px; height: 8px; border-radius: 50%; background: #0F6E56; margin-bottom: 10px; }
+.priv-card { background: #F7F8FB; border-radius: 10px; padding: 20px; border: 0.5px solid #E8E7E2; }
+.priv-card h3 { font-size: 15.5px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.priv-card p { font-size: 13.5px; color: var(--gray); line-height: 1.55; }
+
+/* ============================================================
+   SECCIÓN 6 — CONTACTO
+   ============================================================ */
+#contacto { background: var(--blue-lt); scroll-margin-top: 80px; }
+.contact-inner { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; align-items: start; }
+.contact-info p { font-size: 17px; color: var(--text-mid); line-height: 1.78; margin-bottom: 16px; }
+.contact-info p strong { color: var(--navy); }
+.contact-form { background: var(--white); border-radius: 16px; padding: 40px; box-shadow: var(--shadow); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.fg { margin-bottom: 16px; }
+.fg label { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+.fg input, .fg select, .fg textarea { width: 100%; font-family: var(--font); font-size: 15px; color: var(--text); background: var(--gray-lt); border: 1.5px solid rgba(26,58,92,0.12); border-radius: 8px; padding: 12px 14px; outline: none; -webkit-appearance: none; transition: border-color 0.15s; }
+.fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--blue); background: #fff; box-shadow: 0 0 0 3px rgba(46,155,218,0.1); }
+.fg textarea { resize: vertical; min-height: 90px; }
+.form-submit { width: 100%; font-family: var(--font); font-size: 15px; font-weight: 600; color: #fff; background: var(--navy); border: none; border-radius: 10px; padding: 14px; cursor: pointer; transition: background 0.15s; }
+.form-submit:hover { background: var(--blue); }
+.label-opcional { font-weight: 400; color: var(--gray); }
+.form-note { font-size: 12.5px; color: var(--gray); text-align: center; margin-top: 12px; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer { background: var(--navy); padding: 44px 64px; }
+.footer-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+.fl span:first-child { display: block; font-size: 10px; letter-spacing: 0.22em; color: rgba(255,255,255,0.32); text-transform: uppercase; }
+.fl span:last-child  { font-size: 13.5px; font-weight: 700; letter-spacing: 0.08em; color: rgba(255,255,255,0.78); text-transform: uppercase; }
+.footer-links { display: flex; gap: 28px; list-style: none; }
+.footer-links a { font-size: 13px; color: rgba(255,255,255,0.36); text-decoration: none; }
+.footer-links a:hover { color: rgba(255,255,255,0.72); }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.24); }

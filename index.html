@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Intelligence</title>
+<meta name="description" content="Clínica Intelligence — Software IA que automatiza la documentación clínica para profesionales de salud mental. Convierte sesiones terapéuticas en registros estructurados desde el modelo terapéutico del profesional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="responsive.css">
+<link rel="icon" type="image/png" href="logo/favicon.png">
+<link rel="preload" href="img/ficha_doc_svg_v3.svg" as="image">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo"><img src="logo/LOGO-INTELLIGENCE-3.svg" alt="Logo Clínica Intelligence" class="nav-logo-img"><span class="nav-logo-text"><span class="l1">Clínica</span><span class="l2">Intelligence</span></span></a>
+  <ul class="nav-links">
+    <li><a href="#modelo">Modelos</a></li>
+    <li><a href="#clinicas">Organizaciones</a></li>
+    <li><a href="#funciona">Tecnología</a></li>
+    <li><a href="#privacidad">Privacidad</a></li>
+    <li><a href="#contacto">Contáctenos</a></li>
+  </ul>
+  <div class="nav-ctas">
+    <a href="https://app.clinicaintelligence.cl" class="btn-o">Miembros</a>
+  </div>
+  <button class="nav-hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Menú móvil -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#modelo">Modelos</a>
+  <a href="#clinicas">Organizaciones</a>
+  <a href="#funciona">Tecnología</a>
+  <a href="#privacidad">Privacidad</a>
+  <a href="#contacto">Contáctenos</a>
+  <a href="https://app.clinicaintelligence.cl" class="mobile-menu-cta">Miembros</a>
+</div>
+
+<!-- 1. HERO -->
+<section id="hero">
+  <canvas id="flickerGrid"></canvas>
+  <div class="hero-inner">
+    <div class="fade-in">
+      <span class="hero-eyebrow">Procesamiento IA de lenguaje aplicado a terapia</span>
+      <h1 class="hero-h1">Sesiones terapéuticas procesadas en registros clínicos estructurados</h1>
+      <p class="hero-body">
+        Cada sesión procesada desde el modelo terapéutico, con lenguaje clínico entrenado en español chileno. No interpreta. No propone. Describe con precisión lo que ocurrió — desde adentro. <strong>Una organización que documenta bien, opera mejor.</strong>
+      </p>
+      <div class="hero-ctas">
+        <a href="#modelo" class="btn-pill-outline">Saber más →</a>
+      </div>
+    </div>
+    <div class="hero-img fade-in">
+      <img src="img/ficha_doc_svg_v3.svg" alt="Ficha clínica generada por Clínica Intelligence">
+    </div>
+  </div>
+
+  <!-- Tarjetas — dentro del hero para que el canvas siga de fondo -->
+  <div class="hero-cards fade-in">
+    <div class="hero-card">
+      <div>
+        <div class="hero-card-acento"></div>
+        <p class="hero-card-num">56<span>%</span></p>
+        <p class="hero-card-text">La IA mejoró la adherencia al plan de tratamiento y redujo un 56% el tiempo de documentación clínica.</p>
+      </div>
+      <p class="hero-card-src">Psychology, Scientific Research Publishing, 2025</p>
+    </div>
+    <div class="hero-card">
+      <div>
+        <div class="hero-card-acento"></div>
+        <p class="hero-card-num">99,7<span>%</span></p>
+        <p class="hero-card-text">De las sesiones reales no incluyó registro de intervenciones ni síntesis de sesión — recomendados en casi todos los protocolos basados en evidencia.</p>
+      </div>
+      <p class="hero-card-src">JMIR Formative Research, 2022</p>
+    </div>
+    <div class="hero-card">
+      <div>
+        <div class="hero-card-acento"></div>
+        <p class="hero-card-num">37<span>%</span></p>
+        <p class="hero-card-text">Terapeuta agotado, paciente que no mejora. El burnout reduce un 37% la probabilidad de mejoría clínica.</p>
+      </div>
+      <p class="hero-card-src">JAMA Network Open, 2024</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- 2. MODELOS -->
+<section id="modelo">
+  <div class="inner">
+
+    <!-- Sistémico -->
+    <div class="modelo-bloque fade-in">
+      <div class="modelo-bloque-text">
+        <h3>Modelos Sistémicos</h3>
+        <p>Para terapeutas sistémicos que documentan procesos relacionales complejos. El modelo describe lo que ocurrió en la sesión desde la lógica relacional del trabajo sistémico — interacciones, secuencias y movimientos del sistema. Reconoce herramientas del terapeuta y clasifica intervenciones como reencuadre o clarificación del síntoma. Sintetiza los temas principales de cada sesión para que la continuidad del proceso no dependa de la memoria del terapeuta.</p>
+      </div>
+      <div class="modelo-img">
+        <img src="img/sistemico.png" alt="Ilustración modelo sistémico" loading="lazy">
+      </div>
+    </div>
+
+    <!-- TCC -->
+    <div class="modelo-bloque reverse fade-in">
+      <div class="modelo-bloque-text">
+        <h3>Modelos Cognitivo Conductuales</h3>
+        <span class="tag-proximamente">Próximamente</span>
+      </div>
+      <div class="modelo-img">
+        <img src="img/tcc.png" alt="Ilustración modelo cognitivo conductual" loading="lazy">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Cita final -->
+<section class="modelo-cita">
+  <div class="modelo-quote fade-in">
+    <span class="modelo-quote-comilla">"</span>
+    <p class="modelo-quote-text">Logramos transmitir la experiencia vivida del paciente en sesión, descrita desde el modelo y forma de operar del terapeuta.</p>
+    <div class="modelo-quote-linea"></div>
+    <p class="modelo-quote-sub">La interpretación y conducción clínica es siempre del terapeuta</p>
+  </div>
+</section>
+
+<!-- 3. PARA CLÍNICAS -->
+<section id="clinicas">
+  <div class="inner">
+    <div class="fade-in">
+      <span class="org-pretag">Por qué funciona</span>
+      <h2 class="sec-title sec-title-center">Construido para cómo trabaja<br>un terapeuta de verdad</h2>
+      <p class="org-subtitulo">No es una herramienta genérica adaptada a salud mental. Fue diseñada desde adentro.</p>
+      <div class="org-cards">
+        <div class="org-card org-card-problema">
+          <span class="org-tag org-tag-problema">El problema</span>
+          <h3>Los terapeutas pueden destinar entre 2 a 3 horas diarias en escribir notas manualmente</h3>
+          <p>La documentación manual durante y después de cada sesión acumula una carga invisible. Notas incompletas, registros atrasados y detalles que se pierden entre un paciente y otro. Con el tiempo, el peso administrativo compite directamente con la energía clínica del profesional — y la calidad del registro baja justo cuando más se necesita.</p>
+        </div>
+        <div class="org-card">
+          <span class="org-tag org-tag-solucion">La solución</span>
+          <h3>Clínica Intelligence ayuda al proceso de documentación entre procesos terapéuticos</h3>
+          <p>Al capturar la sesión completa y procesarla desde el modelo terapéutico del profesional, Clínica Intelligence convierte cada conversación en un registro clínico estructurado. El terapeuta recibe documentación clara, consistente y alineada con su forma de trabajar — sin escribir una sola nota.</p>
+        </div>
+        <div class="org-card">
+          <span class="org-tag org-tag-origen">El origen</span>
+          <h3>Construido en colaboración con psicólogos, para ser un compañero clínico confiable</h3>
+          <p>Clínica Intelligence fue construido en colaboración directa con psicólogos clínicos con más de 30 años de experiencia. No es una herramienta genérica adaptada a salud mental — fue diseñada desde adentro, entendiendo cómo piensa y opera un terapeuta. Un compañero fiel que habla el mismo lenguaje clínico.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. CÓMO FUNCIONA — snake flow -->
+<section id="funciona">
+  <div class="inner">
+    <div class="funciona-head fade-in">
+      <span class="funciona-pretag">Cómo funciona</span>
+      <h2 class="sec-title">De la sesión al informe</h2>
+    </div>
+
+    <div class="formula fade-in">
+
+      <div class="formula-card">
+        <span class="formula-num">01</span>
+        <h3 class="formula-titulo">Sonido</h3>
+        <div class="formula-items">
+          <div class="formula-item">grabación</div>
+          <div class="formula-item">voces</div>
+          <div class="formula-item">identificación hablantes</div>
+        </div>
+      </div>
+
+      <span class="formula-op">+</span>
+
+      <div class="formula-card">
+        <span class="formula-num">02</span>
+        <h3 class="formula-titulo">Código</h3>
+        <div class="formula-items">
+          <div class="formula-item">procesamiento</div>
+          <div class="formula-item">automatización</div>
+          <div class="formula-item">integración</div>
+        </div>
+      </div>
+
+      <span class="formula-op">+</span>
+
+      <div class="formula-card formula-card-destacado">
+        <span class="formula-num formula-num-dark">03</span>
+        <h3 class="formula-titulo">Sistemas terapéuticos</h3>
+        <div class="formula-items">
+          <div class="formula-item">psicología clínica</div>
+          <div class="formula-item">lenguaje clínico</div>
+          <div class="formula-item">modelos terapéuticos</div>
+        </div>
+      </div>
+
+      <span class="formula-op">+</span>
+
+      <div class="formula-card">
+        <span class="formula-num">04</span>
+        <h3 class="formula-titulo">Agentes</h3>
+        <div class="formula-items">
+          <div class="formula-item">IA</div>
+          <div class="formula-item">LLM</div>
+          <div class="formula-item">descripción clínica</div>
+          <div class="formula-item">generación de informes</div>
+        </div>
+      </div>
+
+      <span class="formula-op">=</span>
+
+      <div class="formula-center">
+        <img src="img/Google-Docs-Logo.png" alt="Informe clínico" class="formula-center-img" loading="lazy">
+        <span class="formula-center-l2">Informe</span>
+        <span class="formula-center-l3">Sesión</span>
+        <span class="formula-center-time">~3 minutos</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 5. PRIVACIDAD -->
+<section id="privacidad">
+  <div class="inner">
+    <div class="fade-in">
+      <span class="priv-pretag">Privacidad</span>
+      <h2 class="sec-title">Los datos de tus pacientes, protegidos.</h2>
+      <p class="priv-subtitle">Diseñado desde el inicio para cumplir con los estándares clínicos y legales de Chile.</p>
+    </div>
+    <div class="priv-grid fade-in">
+      <div class="priv-card"><div class="priv-badge"></div><h3>AES-256</h3><p>Datos encriptados con el mismo estándar usado por bancos y gobiernos.</p></div>
+      <div class="priv-card"><div class="priv-badge"></div><h3>Audio eliminado</h3><p>Tu grabación se elimina automáticamente tras el procesamiento.</p></div>
+      <div class="priv-card"><div class="priv-badge"></div><h3>SOC 2 Type II</h3><p>Proveedores auditados en seguridad y confidencialidad.</p></div>
+      <div class="priv-card"><div class="priv-badge"></div><h3>Ley 19.628</h3><p>Diseñado para cumplir la protección de datos personales en Chile.</p></div>
+      <div class="priv-card"><div class="priv-badge"></div><h3>Aislamiento por terapeuta</h3><p>Cada profesional solo accede a sus propios datos.</p></div>
+      <div class="priv-card"><div class="priv-badge"></div><h3>Consentimiento informado</h3><p>Nada se procesa sin autorización del paciente.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. CONTACTO -->
+<section id="contacto">
+  <div class="inner">
+    <div class="contact-inner">
+      <div class="contact-info fade-in">
+        <span class="eyebrow">Información</span>
+        <h2 class="sec-title">Contáctenos</h2>
+        <p>Cada organización tiene necesidades distintas.</p>
+        <p>Por eso, <strong>Clínica Intelligence adapta sus servicios y precios según tus operaciones y flujo de trabajo.</strong></p>
+        <p>Envíanos un mensaje y <strong>habla con un operador</strong> para conocer cómo nuestra plataforma puede integrarse a tu equipo y optimizar tu documentación clínica.</p>
+      </div>
+      <form class="contact-form fade-in" id="contactForm" action="https://formspree.io/f/mykbyjkr" method="POST">
+        <div class="form-row">
+          <div class="fg"><label>Nombre</label><input type="text" name="nombre" placeholder="Tu nombre" required></div>
+          <div class="fg"><label>Email</label><input type="email" name="email" placeholder="tu@clinica.cl" required></div>
+        </div>
+        <div class="fg"><label>Nombre de la institución</label><input type="text" name="institucion" placeholder="Clínica..." required></div>
+        <div class="fg">
+          <label>Número de terapeutas</label>
+          <select name="terapeutas" required>
+            <option value="" disabled selected>Selecciona</option>
+            <option>1 – 5 terapeutas</option>
+            <option>6 – 15 terapeutas</option>
+            <option>16 – 30 terapeutas</option>
+            <option>Más de 30 terapeutas</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Mensaje <span class="label-opcional">(opcional)</span></label>
+          <textarea name="mensaje" placeholder="Cuéntanos sobre tu institución o agrega alguna pregunta..."></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">Enviar solicitud</button>
+        <p class="form-note">Responderemos en menos de 24 horas hábiles.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="fl"><span>Clínica</span><span>Intelligence</span></div>
+    <ul class="footer-links">
+      <li><a href="#modelo">Modelos</a></li>
+      <li><a href="#clinicas">Organizaciones</a></li>
+      <li><a href="#funciona">Tecnología</a></li>
+      <li><a href="#privacidad">Privacidad</a></li>
+      <li><a href="#contacto">Contáctenos</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Clínica Intelligence SpA · Santiago, Chile</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

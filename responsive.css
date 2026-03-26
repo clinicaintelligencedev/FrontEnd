@@ -1,0 +1,333 @@
+/* ============================================================
+   CLÍNICA INTELLIGENCE — Responsive (mobile / tablet)
+   Solo media queries. No modifica styles.css.
+   ============================================================ */
+
+/* Evitar desbordamiento horizontal en todas las pantallas */
+html, body {
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hamburguesa — oculto en desktop */
+.nav-hamburger { display: none; }
+.mobile-menu { display: none; }
+
+/* ---- Tablet: 769px – 1024px ---- */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /* NAV — reducir espaciado */
+  nav#nav {
+    padding: 0 24px;
+  }
+  .nav-links {
+    gap: 20px;
+  }
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  /* LAYOUT GENERAL */
+  .inner {
+    padding: 72px 32px;
+  }
+
+  /* HERO — reducir padding y gap */
+  #hero .hero-inner {
+    padding: 40px 32px 60px 48px;
+    gap: 32px;
+  }
+  .hero-h1 {
+    font-size: 28px;
+  }
+  .hero-cards {
+    padding: 0 24px 48px;
+  }
+
+  /* ORGANIZACIONES — 2 columnas, la tercera baja */
+  .org-cards {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .org-card:first-child {
+    grid-column: 1 / -1;
+  }
+
+  /* FÓRMULA — grid 2x2, operadores ocultos, resultado abajo */
+  #funciona .formula {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  #funciona .formula-op {
+    display: none;
+  }
+  .formula-center {
+    grid-column: 1 / -1;
+    margin-top: 8px;
+  }
+
+  /* PRIVACIDAD — 2 columnas */
+  .priv-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* CONTACTO — reducir gap */
+  .contact-inner {
+    gap: 40px !important;
+  }
+}
+
+/* ---- Móvil: <= 768px ---- */
+@media (max-width: 768px) {
+
+  /* NAV — ocultar links, solo logo + botón */
+  nav#nav {
+    padding: 0 16px;
+    height: 60px;
+  }
+  ul.nav-links {
+    display: none !important;
+  }
+  .nav-ctas {
+    display: none !important;
+  }
+  .nav-logo-img {
+    height: 36px;
+    width: 36px;
+  }
+
+  /* Botón hamburguesa */
+  .nav-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 200;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--navy);
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  .nav-hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav-hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Menú desplegable móvil */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(8px);
+    padding: 16px 24px 24px;
+    gap: 0;
+    z-index: 99;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+    pointer-events: none;
+    border-bottom: 1px solid rgba(26,58,92,0.08);
+  }
+  .mobile-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .mobile-menu a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-mid);
+    text-decoration: none;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(26,58,92,0.06);
+  }
+  .mobile-menu a:last-child {
+    border-bottom: none;
+  }
+  .mobile-menu-cta {
+    margin-top: 8px;
+    text-align: center;
+    background: var(--navy);
+    color: #fff !important;
+    border-radius: 100px;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+  }
+
+  /* LAYOUT GENERAL — paddings reducidos */
+  .inner {
+    padding: 48px 16px;
+  }
+
+  /* HERO */
+  #hero .hero-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px 40px;
+    gap: 24px;
+    min-height: auto;
+  }
+  #hero .hero-inner .hero-img {
+    order: -1;
+    padding: 32px 0;
+  }
+  .hero-h1 {
+    font-size: 26px;
+  }
+  .hero-body {
+    font-size: 15px;
+  }
+  .hero-ctas {
+    margin-top: 24px;
+  }
+  .btn-pill-outline {
+    padding: 12px 40px;
+    font-size: 14px;
+  }
+  .hero-img {
+    width: 100%;
+  }
+  .hero-img img {
+    width: 100%;
+    max-height: 260px;
+  }
+
+  /* Hero cards — 1 columna */
+  #hero .hero-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 16px 40px;
+  }
+
+  /* MODELOS — 1 columna */
+  .modelo-bloque {
+    display: flex !important;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
+  .modelo-bloque.reverse .modelo-bloque-text,
+  .modelo-bloque.reverse .modelo-img {
+    order: unset;
+  }
+  .modelo-bloque-text h3 {
+    font-size: 24px;
+  }
+
+  /* Cita modelos — padding reducido */
+  .modelo-cita {
+    padding: 32px 16px;
+  }
+  .modelo-quote {
+    padding: 24px 20px;
+  }
+
+  /* ORGANIZACIONES — 1 columna */
+  #clinicas .org-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .org-card {
+    padding: 24px 20px;
+  }
+  .org-card h3 {
+    min-height: auto;
+    font-size: 18px;
+  }
+
+  /* Título sección clínicas */
+  #clinicas .sec-title {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  /* FÓRMULA — apilado vertical */
+  #funciona .formula {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .formula-card {
+    width: 100%;
+  }
+  .formula-op {
+    padding: 4px 0;
+  }
+  .formula-center-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* PRIVACIDAD — 1 columna */
+  #privacidad .priv-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  #privacidad .sec-title {
+    font-size: 24px;
+  }
+
+  /* CONTACTO — 1 columna */
+  #contacto .contact-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  #contacto .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .contact-form {
+    padding: 24px 16px;
+    width: 100%;
+  }
+  #contacto .sec-title {
+    font-size: 24px;
+  }
+
+  /* FOOTER — columna centrada */
+  footer {
+    padding: 32px 16px;
+  }
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Títulos generales más chicos en móvil */
+  .sec-title {
+    font-size: 24px;
+  }
+}
