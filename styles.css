@@ -77,7 +77,7 @@ section { width: 100%; }
 .hero-card-num { font-size: 48px; font-weight: 700; color: var(--navy); line-height: 1; margin-bottom: 1rem; font-family: Georgia, serif; }
 .hero-card-num span { font-size: 32px; }
 .hero-card-text { font-size: 13px; color: #5F5E5A; line-height: 1.7; flex: 1; margin-bottom: 1.25rem; }
-.hero-card-src { display: inline-block; font-size: 10px; font-weight: 600; color: #888780; background: #F1EFE8; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.02em; }
+.hero-card-src { display: inline-block; align-self: flex-start; font-size: 10px; font-weight: 600; color: #888780; background: #F1EFE8; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.02em; }
 
 /* ============================================================
    SECCIÓN 2 — MODELOS
@@ -179,8 +179,8 @@ section { width: 100%; }
    ============================================================ */
 footer { background: var(--navy); padding: 44px 64px; }
 .footer-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-.fl span:first-child { display: block; font-size: 10px; letter-spacing: 0.22em; color: rgba(255,255,255,0.32); text-transform: uppercase; }
-.fl span:last-child  { font-size: 13.5px; font-weight: 700; letter-spacing: 0.08em; color: rgba(255,255,255,0.78); text-transform: uppercase; }
+.fl span:first-child { display: block; font-size: 13.5px; font-weight: 700; letter-spacing: 0.08em; color: rgba(255,255,255,0.78); text-transform: uppercase; }
+.fl span:last-child  { display: block; font-size: 10px; letter-spacing: 0.22em; color: rgba(255,255,255,0.32); text-transform: uppercase; }
 .footer-links { display: flex; gap: 28px; list-style: none; }
 .footer-links a { font-size: 13px; color: rgba(255,255,255,0.36); text-decoration: none; }
 .footer-links a:hover { color: rgba(255,255,255,0.72); }
