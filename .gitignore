@@ -6,3 +6,6 @@ logo/favicon_original.png
 # Fuente JS legible — solo existe localmente.
 # El repo público solo contiene main.min.js (minificado).
 main.js
+
+# Script de build local — no necesita estar en el repo público.
+build.sh
