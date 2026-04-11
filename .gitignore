@@ -2,3 +2,7 @@
 *.code-workspace
 *.md
 logo/favicon_original.png
+
+# Fuente JS legible — solo existe localmente.
+# El repo público solo contiene main.min.js (minificado).
+main.js
